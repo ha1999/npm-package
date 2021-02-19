@@ -1,0 +1,21 @@
+{
+  "name": "ha_uet-hello-world",
+  "version": "1.0.0",
+  "description": "the first npm package",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/monisnap-jason/unicorn-says-hello-world.git"
+  },
+  "keywords": [],
+  "author": "ha-uet",
+  "license": "ISC"
+}
