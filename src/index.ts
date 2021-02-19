@@ -30,6 +30,6 @@ export const decryptedData = (encryptedData, privateKey) => crypto.privateDecryp
 		oaepHash: "sha256",
 		passphrase: 'top secret',
 	},
-	encryptedData
+	Buffer.from(encryptedData, 'base64')
 ).toString()
 
