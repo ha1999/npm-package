@@ -16,7 +16,7 @@ export const generateKey = () => generateKeyPairSync('rsa', {
 
 // console.log(publicKey.toString('hex'), privateKey)
 const data = crypto.randomBytes(20).toString('hex');
-export const encryptedData = (data, publicKey) => crypto.publicEncrypt(
+export const encryptedData = (data) => crypto.publicEncrypt(
 	{
 		key: publicKey,
 		padding: crypto.constants.RSA_PKCS1_OAEP_PADDING,
@@ -26,7 +26,7 @@ export const encryptedData = (data, publicKey) => crypto.publicEncrypt(
 )
 
 // console.log("encypted data: ", encryptedData.toString("hex"))
-export const decryptedData = (encryptedData, privateKey) => crypto.privateDecrypt(
+export const decryptedData = (encryptedData) => crypto.privateDecrypt(
 	{
 		key: privateKey,
 		padding: crypto.constants.RSA_PKCS1_OAEP_PADDING,
