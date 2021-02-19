@@ -22,7 +22,6 @@ export const encryptedData = (data, publicKey) => crypto.publicEncrypt(
 	},
 	Buffer.from(data)
 )
-
 export const decryptedData = (encryptedData, privateKey) => crypto.privateDecrypt(
 	{
 		key: privateKey,
@@ -32,4 +31,3 @@ export const decryptedData = (encryptedData, privateKey) => crypto.privateDecryp
 	},
 	encryptedData
 )
-
